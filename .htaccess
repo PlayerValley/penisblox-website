@@ -1,0 +1,21 @@
+# remove html from urls
+RewriteEngine on
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+# redirect ide/landing.aspx and my/places.aspx to welcome.html because im too lazy to make an aspx just to redirect
+Redirect 302 /IDE/Landing.aspx http://penisblox.ct8.pl/IDE/welcome
+Redirect 302 /My/Places.aspx http://penisblox.ct8.pl/IDE/welcome
+
+# replace certain directories with their uppercase counterparts
+Redirect 302 /asset http://penisblox.ct8.pl/Asset
+Redirect 302 /game http://penisblox.ct8.pl/Game
+
+# set error pages
+ErrorDocument 404 http://penisblox.ct8.pl/error
+ErrorDocument 403 http://penisblox.ct8.pl/error
+ErrorDocument 500 http://penisblox.ct8.pl/error
