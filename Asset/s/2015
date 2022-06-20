@@ -1,0 +1,4 @@
+--rbxsig%YW8uO9HeaBCY8iVKO82KIOlpjABryheW3V8LAiUbYggCuZFe/Fz6VkxW/UItO4cosYLCwXwWxBA9Dk6wKZoIePwKfpx92szYfWr2vSaXr7JQR9yq22Sucv7kmOhQTV94S2KQqnVsWHxX8pepYYbXqi2KD2wOkuhpD6N/5mpXUvE=%--rbxassetid%2015%
+print("test")
+printidentity()
+print(version())
